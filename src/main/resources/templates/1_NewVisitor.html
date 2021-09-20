@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Theme park Lars</title>
+    <link rel="stylesheet" href="img/style.css">
+</head>
+<body>
+<h1>Theme park Lars</h1>
+<form action="/2_NewVisitor">
+    <p>
+        <label for="firstname">First name</label>
+        <input type="text" name="firstname" id="firstname">
+    </p>
+    <p>
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" id="surname">
+    </p>
+    <p>
+        <label for="yearofbirth">Year of birth</label>
+        <input type="text" name="yearofbirth" id="yearofbirth">
+    </p>
+    <p th:each="Themepark: ${themePark}">
+        <input type="radio" name="themeParkIndex"
+            th:checked="${ThemeparkStat.index} == 0"
+        th:value="${ThemeparkStat.index}"
+        th:id="${ThemeparkStat.index}"/>
+        <label th:for="${ThemeparkStat.index}"
+        th:text="${Themepark.getName()}">
+        </label>
+    </p>
+    <p>
+        <input type="submit" name="register" value="Continue and generate park code">
+    </p>
+
+</form>
+<a href="/">Back to home page</a>
+</body>
+</html>
