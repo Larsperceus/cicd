@@ -1,12 +1,13 @@
-package fact.it.projectthemepark;
+package fact.it.springgithubactionsdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-// Lars Kammeijer r0831083
+
 @SpringBootApplication
-public class ProjectthemeparkApplication {
+public class SpringGithubActionsDemoApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(ProjectthemeparkApplication.class, args);
+        SpringApplication.run(SpringGithubActionsDemoApplication.class, args);
     }
 
 }
